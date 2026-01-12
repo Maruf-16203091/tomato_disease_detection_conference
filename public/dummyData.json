@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "disease": "Tomato___Bacterial_spot",
+      "confidence": 0.92,
+      "reasoning": "The tomato shows small dark water-soaked spots on the leaves caused by bacterial infection. It spreads through water splashes and contaminated tools.",
+      "advice": "Remove affected leaves immediately\n- Apply copper-based bactericide and maintain proper irrigation"
+    },
+    {
+      "id": 2,
+      "disease": "Tomato___Early_blight",
+      "confidence": 0.88,
+      "reasoning": "Concentric brown rings appear on leaves and yellowing occurs due to fungal infection. High humidity accelerates the disease spread.",
+      "advice": "Remove and destroy infected leaves\n- Apply fungicide and avoid overhead watering"
+    },
+    {
+      "id": 3,
+      "disease": "Tomato___healthy",
+      "confidence": 0.99,
+      "reasoning": "The tomato plant shows no visible disease symptoms such as leaf spots, discoloration, mold growth, or deformation.",
+      "advice": "Maintain proper irrigation and balanced nutrition\n- Continue routine crop monitoring"
+    }
+  ]
+  

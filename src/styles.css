@@ -1,0 +1,279 @@
+body {
+	font-family: "Inter", sans-serif;
+	background-color: #f4f7f6;
+	margin: 0;
+	padding: 0;
+	color: #333;
+}
+
+.app-container {
+	max-width: 900px;
+	margin: auto;
+	padding: 20px;
+}
+
+header {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+header h1 {
+	font-size: 2.2rem;
+	color: #2e7d32;
+
+}
+
+header p {
+	color: #555;
+}
+
+.upload-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.custom-file-upload {
+	padding: 12px 25px;
+	border: 2px dashed #2e7d32;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 0.3s;
+	background-color: #e8f5e9;
+}
+
+.custom-file-upload:hover {
+	background-color: #c8e6c9;
+}
+
+input[type="file"] {
+	display: none;
+}
+
+/* ===============================
+   IMAGE + RESULT LAYOUT
+================================= */
+
+.result-section {
+	display: flex;
+	gap: 30px;
+	margin-top: 30px;
+	align-items: stretch;
+	position: relative;
+	/* 👈 important */
+}
+
+
+/* Image (left side) */
+.image-preview {
+	flex: 0.8;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+
+
+.image-preview img {
+	width: 100%;
+	height: 100%;
+	max-width: 320px;
+	object-fit: cover;
+	border-radius: 15px;
+	border: 2px solid #2e7d32;
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.image-preview img:hover {
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Prediction (right side) */
+.prediction-panel {
+	flex: 1.5;
+	display: flex;
+	flex-direction: column;
+}
+
+
+/* ===============================
+   DISEASE CARD
+================================= */
+.disease-list {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.disease-card {
+	background-color: #ffffff;
+	padding: 20px;
+	border-radius: 15px;
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+	transition: 0.3s;
+}
+
+.disease-card:hover {
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.disease-card h2 {
+	color: #2e7d32;
+	margin-bottom: 10px;
+}
+
+.advice,
+.reasoning {
+	margin-top: 15px;
+	text-align: justify;
+
+}
+
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================= */
+@media (max-width: 768px) {
+	.result-section {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.image-preview {
+		text-align: center;
+	}
+
+	.prediction-panel {
+		width: 100%;
+	}
+}
+
+@media (max-width: 600px) {
+	.upload-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.custom-file-upload {
+		width: 80%;
+		text-align: center;
+	}
+
+	.image-preview img {
+		max-width: 250px;
+	}
+}
+
+/* ===============================
+   FOOTER
+================================= */
+
+.footer {
+	background-color: #ffffff;
+	border-top: 1px solid #dcdcdc;
+	margin-top: 30px;
+	padding: 15px 15px;
+	border-radius: 8px;
+}
+
+.footer-bg {
+	width: 100%;
+}
+
+.footer-content {
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: justify;
+	font-size: 0.9rem;
+	line-height: 1.7;
+	color: #444;
+}
+
+.footer-content p {
+	margin: 0;
+}
+
+.footer-content strong {
+	color: #2e7d32;
+}
+
+
+@media (max-width: 900px) {
+	.footer-content {
+		width: 100%;
+		padding: 0 15px;
+		box-sizing: border-box;
+	}
+}
+
+@media (max-width: 600px) {
+	.footer {
+		padding: 15px 10px;
+	}
+
+	.footer-content {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+
+/* Full overlay to center loader */
+.loader-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+}
+
+/* Loader box styling */
+.loader-box {
+	text-align: center;
+}
+
+/* Spinner animation */
+.loader {
+	border: 5px solid #f3f3f3;
+	border-top: 5px solid #2e7d32;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	animation: spin 1s linear infinite;
+	margin: 0 auto 10px;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* Processing text */
+.loader-box p {
+	font-size: 1rem;
+	color: #2e7d32;
+	font-weight: 500;
+}
+
+
+/* Add to your styles.css */
+.image-preview-blur {
+	filter: blur(5px);
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	/* adjust as needed */
+	transition: all 0.3s ease;
+}
